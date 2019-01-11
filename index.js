@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 fetch(api2)
     .then(function(response) { return response.json(); })
     .then(function(data) {
-        var parsedData = parseData(data).slice(0,100);
+
+        var parsedData = parseData(data).slice(data.length-301,data.length-1);
         drawChart(parsedData);
         //  console.log('parsedData',parsedData);
     })
